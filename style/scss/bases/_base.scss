@@ -1,0 +1,21 @@
+/*===================================*
+/           base stylesheet
+/*===================================*/
+body{
+     @include contextColor($color-bg-page,$color-text-page);
+     margin-top:0.5em;
+}
+ .wrapper{
+ 	 max-width:900px;
+     @include contextColor($color-bg-wrapper);
+     @include center($values:0 auto);
+     @include shadow-box(0 0 26px rgba(0,0,0, .13));
+     @include border(.7em);
+     @include mq('xs'){
+         @include center(96%);
+    }
+     @include mq('sm'){
+         @include center(90%,2.5em auto);
+    }
+}
+ 

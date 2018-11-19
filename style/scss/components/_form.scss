@@ -1,0 +1,59 @@
+/*================================* /
+            Form styles 
+/*================================*/
+ 
+ form{
+     @include border(0.2em,4px solid #fff);
+     @include contextColor(#fff);
+     @include flexible($display:flex);
+     @include center($values:0 auto);
+     @include shadow-box(0 1px 14px rgba(0,0,0, .12));
+     
+     input,button{
+         outline:none;
+     }
+     input{
+        @include border($border:none);
+        @include text-orientation(center);
+     }
+     button{
+         @include contextColor($color-bg-button-form,$color-white);
+         @include border(.2em,none);
+         cursor:pointer;
+    }
+
+     @include mq('xs'){
+         @include center(95%);
+         margin-top:2.5em;
+         @include flexible($direction: column);
+         input{
+            @include font($size:1.15rem);
+            padding:.5em;
+         }
+         button{
+             margin-top:.5em;
+             padding:.6em 0;
+             @include font($size:1.14rem);
+         }
+    }
+
+     @include mq('sm'){
+          position:relative;
+          z-index:3000;
+          margin-top:5.5em;
+         @include center(60%);
+         @include flexible($direction: row);
+
+         input{
+             @include font($size:1.1rem);
+             @include text-orientation(left);
+             padding:.65em;
+             flex:2;
+         }
+         button{
+             @include font($size:1.1rem);
+             padding:0 1em;
+         }
+    }
+}
+ 

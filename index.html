@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>DCCV APP</title>
+      <link rel="stylesheet" href="style/css/styles.css">
+      <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <!--contenedor rsvp-->
+      <div class="wrapper">
+         <!-- header card -->
+         <header class="wrapper-header">
+            <h1>DCCV</h1>
+            <p>Social App</p>
+            <!-- form invitees -->
+            <form id="registrar">
+               <input placeholder="Invite Someone" id="invitee"/>
+               <button type="submit" id="submit">Submit</button>
+            </form>
+         </header>
+         <!-- body card -->
+         <div class="wrapper-main">
+            <h2>Invitees</h2>
+            <div class="wrapper-responded">
+               <label for="no-responded">Hide those who haven't responded
+               <input type="checkbox" name="no-responded" id="no-responded"></label>
+            </div>
+            <!-- list of invitees -->
+            <ul class="list-card">
+            </ul>
+         </div>
+      </div>
+   <script src="js/addInvitees.js"> </script>
+   </body>
+</html>

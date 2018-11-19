@@ -1,0 +1,51 @@
+/*================================* /
+            container styles
+/*================================*/
+.wrapper-main {
+    position:relative;
+    z-index:10;
+    .wrapper-responded {
+
+       @include contextColor($color-text: #767676);
+        input[type="checkbox"] {
+         transform: scale(1.1);
+         margin-left: 0.3em;
+         cursor:pointer;
+        }  
+    }  
+    .list-card{
+        padding: 0;
+        list-style:none;
+        margin:2em 0 1em;
+    }
+    @include mq('xs') {
+        padding: .8em 0.95em;
+    h2{
+      @include font($size: 1.55rem);
+    }
+    .wrapper-responded{
+       @include font($size: .95rem);
+    }
+   }
+    @include mq('sm') {
+        padding: 3em 2em;
+    h2{
+      @include font($size: 2rem);
+      float: left;
+      margin:0;
+    }
+    .wrapper-responded{
+       float:right;
+       @include font($size: 1.1rem);
+      label{
+        line-height: 2.5;
+      }
+    }
+    .list-card{
+        clear: both;
+        padding-top:1.25em;
+        @include flexible($display:flex,$space:space-between,$wrap:wrap,);
+
+    }
+}
+}

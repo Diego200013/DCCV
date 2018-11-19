@@ -1,0 +1,98 @@
+//===============================*
+//            Mixins
+//==============================*/
+// establish context -> background <=> color
+@mixin contextColor(
+	$color-bg:null,
+	$color-text: null){
+  background-color: $color-bg;
+  color:$color-text;
+  @content;
+}
+// center
+@mixin center(
+	$width:null,
+	$values:null){
+  width: $width;
+  margin:$values;
+}
+//shadow to boxes
+@mixin shadow-box($regla){
+	box-shadow:$regla;
+}
+//put border to box
+@mixin border(
+	$radius:null,
+	$border:null){
+	border-radius: $radius;
+	border:$border;
+}
+@mixin background(
+	$image:null,
+	$gradient:null,
+	$color:null,
+	$blend:null,
+	$size:null,
+	$repeat:null,
+	$height: null){
+	background:$gradient,$image{
+      blend-mode:$blend;
+      color:$color;
+      size:$size;
+      repeat:$repeat;
+	}
+}
+//direction text
+@mixin text-orientation($orientation){
+	text-align: $orientation;
+}
+//flexy
+@mixin flexible(
+	$direction:null,
+	$wrap:null,
+	$display:null,
+	$grew:null,
+	$basis:null,
+	$space:null){
+	display: $display;
+	flex-direction:$direction;
+	flex-wrap:$wrap;
+	flex-grow: $grew;
+	flex-basis: $basis;
+	justify-content: $space;
+}
+//font-size
+@mixin font(
+	$size:null,
+	$family:null,
+	$weight:null){
+	font:{
+		family:$family;
+		size:$size;
+	    weight:$weight;
+	}
+}
+// media queries xs ||sm || md || lg
+@mixin mq($break:null,$aditional:null,$max-min:null){
+ $value : map-get($breakpoints,$break);
+ $break-sm : map-get($breakpoints,'sm');
+
+  
+ @if $aditional != null {
+ 	@media ($max-min: $aditional){
+ 	@content;
+ }
+ }@else{
+ @if $value < $break-sm{
+ 	@media (max-width: $value){
+ 		@content;
+    }
+ }
+ @else{
+    @media (min-width: $value){
+    	@content;
+    }
+ }
+
+}
+}

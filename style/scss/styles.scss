@@ -1,0 +1,21 @@
+//=====================================*
+//              import 
+//=====================================*/
+
+//--------- utilities ------------*
+@import "utilities/variables";
+@import "utilities/mixins";
+
+//---------  bases ---------------*
+@import "bases/reset";
+@import "bases/fonts";
+@import "bases/base";
+
+//---------- layout---------------*
+@import "layout/header";
+@import "layout/container";
+
+//--------- components -----------*
+@import "components/form";
+@import "components/cards";
+@import "components/animation";

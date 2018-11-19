@@ -1,0 +1,16 @@
+/*===================================*
+/           animation stylesheet
+/*===================================*/
+%transition{
+   transition: 0.4s;
+}
+
+.list-card .responded{
+    @extend %transition;
+    border-color: $color-responded;
+    label{
+    	@include contextColor($color-text:$color-responded);
+    	@extend %transition;
+    }
+
+}

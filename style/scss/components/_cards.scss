@@ -1,0 +1,72 @@
+/*===================================*
+/           cards stylesheet
+/*===================================*/
+.list-card{
+   li{
+   	  padding:1em;
+   	  margin-bottom: .7em;
+      @include contextColor($color-bg-white);
+      @include border(.2em,solid 1px rgba(88, 183, 205, .2));
+      border-bottom: solid 2px rgba(88, 183, 205, .2);
+      position:relative;
+
+      span,label{
+      	display: block;
+      }
+      span,input[type="text"]{
+      	@include contextColor($color-text:$color-name-invitee);
+      	@include font($size:1.3rem);
+      	margin-bottom: .6em;
+      }
+      input[type="text"]{
+        @include border($border:1px dashed grey);
+        padding:.1em;
+      }
+      label{
+      	@include font($size:.9em);
+      	@include contextColor($color-text:rgba(112, 112, 112, .55));
+      	margin-bottom: 1.2em;
+
+      	input{
+      	   cursor:pointer;
+           margin-left: 0.4em;
+           position:relative;
+           top:.1em;
+      	}
+      }
+
+      button{
+      	@include border($border:none);
+      	@include contextColor($color-text:$color-white);
+      	@include border($radius:.3em);
+      	@include font($size:0.75rem);
+        outline:none;
+        padding: .4em .6em;
+        cursor:pointer;
+      }
+      button:nth-of-type(1){
+      	@include contextColor($color-bg: #58b7cd);
+        margin-right: 0.8em;
+      }
+      button:nth-of-type(2){
+      	@include contextColor($color-bg:#ff0000);
+        opacity: .8,
+      }
+      
+      @include mq('sm'){
+      	@include flexible($grew:1,$basis:30%);
+      	margin:0 1.25% 1em;
+      }
+       @include mq($aditional:880px,$max-min:min-width){
+      	@include flexible($grew:1,$basis:17%);
+      	margin:0 1.25% 1em;
+      }
+
+   }
+
+
+
+
+
+
+}
